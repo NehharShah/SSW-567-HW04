@@ -1,8 +1,9 @@
 import requests
 import json
+from constants import GITHUB_URL, USERS, REPOS, SLASH, COMMITS
 
 def githubapi(id):
-    response = requests.get('https://api.github.com/users/' + id + '/repos')
+    response = requests.get(GITHUB_URL + USERS + SLASH + id + REPOS)
 
     if response.status_code != 200:
         print("No Account with this id")
