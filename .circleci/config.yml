@@ -32,7 +32,7 @@ jobs:
           command: |
             pip install requests
             cd HW04
-            pytest --junitxml=../test-results/junit.xml Testgihubapi.py
+            pytest --junitxml=test-results/junit.xml Testgihubapi.py
       - store_test_results:
           path: test-results
 workflows:
